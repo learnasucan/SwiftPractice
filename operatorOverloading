@@ -13,11 +13,21 @@ class Operations {
         
     }
     
+    static func +=(lhs: inout Operations, rhs: Operations) {
+        
+        let result = lhs.num + rhs.num
+        lhs.num = result
+        
+    }
+    
 }
     
-let op1 = Operations(num: 12)
+var op1 = Operations(num: 12)
 let op2 = Operations(num: 2)
 
+op1 += op2
 let op3 = op1 + op2
 
 print(op3.num)
+
+
