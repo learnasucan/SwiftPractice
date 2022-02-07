@@ -1,0 +1,23 @@
+class Operations {
+
+    var num: Int
+    
+    init(num: Int) {
+        self.num = num
+    }
+    
+    static func +(lhs: Operations, rhs: Operations) -> Operations {
+        
+        let result = lhs.num + rhs.num
+        return Operations(num: result)
+        
+    }
+    
+}
+    
+let op1 = Operations(num: 12)
+let op2 = Operations(num: 2)
+
+let op3 = op1 + op2
+
+print(op3.num)
